@@ -1,0 +1,17 @@
+const assertEqual = function(actual, expected) {
+  const pass = '✅';
+  const fail = '🛑';
+  if (actual === expected) {
+    console.log(`${pass}${pass}${pass} Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`${fail}${fail}${fail} Assertion Failed: ${actual} !== ${expected}`);
+  }
+};
+
+const head = function(array) {
+  let result = array.shift();
+  return result;
+};
+
+assertEqual(head([5, 6, 7]), 5);
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
