@@ -1,4 +1,3 @@
-// FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
   const pass = '✅';
   const fail = '🛑';
@@ -14,7 +13,7 @@ const eqArrays = function(array1, array2) {
     return false;
   }
   let isTrue = true;
-  for (let i = 0; i < array1.length; i++) {
+  for (let i of array1) {
     if (array1[i] !== array2[i]) {
       isTrue = false;
     }
