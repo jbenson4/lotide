@@ -15,8 +15,9 @@ const assertArraysEqual = function(array1, array2) {
   const fail = '🛑';
   let isTrue = true;
 
-  if (!eqArrays(array1, array2)) isTrue = false;
-
+  if (!eqArrays(array1, array2)) {
+    isTrue = false;
+  }
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
       isTrue = false;
@@ -31,9 +32,3 @@ const assertArraysEqual = function(array1, array2) {
 };
 assertArraysEqual([1, 2, 3], [1, 2, 3]);
 assertArraysEqual([1, 2, 3], [3, 2, 1]);
-
-
-
-
-
-
